@@ -91,3 +91,28 @@ BEGIN
    ………..
 END;
 ```
+
+### %ROWTYPE
+%rowtype attribute provides a record type that represents a row in a table. For example, if the EMPLOYEE table contains four columns—EMPID, LASTNAME, FIRSTNAME, and SALARY—and you want to manipulate the values in each column of a row using only one referenced variable, the variable can be declared with the %rowtype keyword. Compare the use of %rowtype to manual record declaration:
+EXAMPLE
+```
+DECLARE
+        my_employee employee%ROWTYPE;
+BEGIN
+        select * into my_employee from emp where emono = 100;
+END;
+```
+To refer empid of employee table we have to use my_employee.empid, similarly for lastname we have to use my_employee.lastname.
+The other way is:
+```
+DECLARE
+           my_empid employee.empid%TYPE,
+           my_lastname employee.lastname%TYPE,
+           my_firstname employee.firstname%TYPE,
+           my_salary employee.salary%TYPE;
+BEGIN
+……..
+END;
+```
+
+# EXERCISE
