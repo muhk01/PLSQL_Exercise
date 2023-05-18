@@ -68,3 +68,37 @@ DBMS_OUTPUT.PUT_LINE('c is equal : ' || c);
 NULL;
 end;
 ```
+
+# Assignment
+![alt text]([http://url/to/img.png](https://raw.githubusercontent.com/muhk01/plsql_exercise/main/3.%20Loop%20and%20Conditional%20Statements/8c1af799-e659-4dce-96f5-96f0482dceb6.png))
+## Create and Insert value to Table.
+```
+create table cust_charge(cno number(3) primary key, meter_no number(3) unique, prev_reading number(3), current_reading number(3), units number(5), bill_amount number(38));
+insert into cust_charge values (89,100,300,800,0,0);
+insert into cust_charge values (67,101,200,800,0,0);
+insert into cust_charge values (90,200,100,800,0,0);
+```
+## Calculate Units and Bills Total
+```
+declare
+v_cols cust_charge%rowtype;
+v_bills number:=0;
+v_extras number:=0;
+v_bills_total number:=0;
+u number;
+begin
+select * into v_cols from cust_charge where cno = 89;
+    u:=v_cols.current_reading - v_cols.prev_reading;
+    for c in 1..u loop
+        if(c < 100) then
+            v_bills:=v_bills + 0.5;
+        else
+            v_extras:=v_extras + 0.75;
+        end if;
+    end loop;
+    v_bills_total:= v_bills + v_extras;
+    update cust_charge set units = u, bill_amount = v_bills_total
+    where cno=89;
+    DBMS_OUTPUT.PUT_LINE(v_bills_total || ' ' || u);
+end;
+```
