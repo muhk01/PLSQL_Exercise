@@ -116,3 +116,4 @@ END;
 ```
 
 # EXERCISE
+Refer to EXERCISE - Variable and Declaration.md
