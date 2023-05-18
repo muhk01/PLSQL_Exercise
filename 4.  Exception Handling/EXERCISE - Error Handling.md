@@ -84,6 +84,7 @@ insert into item values(1,'pen',10,1000);
 insert into item values(2,'pencil',10,4);
 ```
 Exception Handling 
+```
 --Pre defined Exception
 declare 
 out_of_stock EXCEPTION;
