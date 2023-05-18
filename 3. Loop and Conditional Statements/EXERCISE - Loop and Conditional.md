@@ -70,7 +70,7 @@ end;
 ```
 
 # Assignment
-![alt text]([http://url/to/img.png](https://raw.githubusercontent.com/muhk01/plsql_exercise/main/3.%20Loop%20and%20Conditional%20Statements/8c1af799-e659-4dce-96f5-96f0482dceb6.png))
+![alt text](http://url/to/img.png](https://raw.githubusercontent.com/muhk01/plsql_exercise/main/3.%20Loop%20and%20Conditional%20Statements/8c1af799-e659-4dce-96f5-96f0482dceb6.png))
 ## Create and Insert value to Table.
 ```
 create table cust_charge(cno number(3) primary key, meter_no number(3) unique, prev_reading number(3), current_reading number(3), units number(5), bill_amount number(38));
