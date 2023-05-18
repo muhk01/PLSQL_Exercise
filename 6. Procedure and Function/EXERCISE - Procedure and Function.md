@@ -1,6 +1,5 @@
-# Exercise to Comparing USAGE OF PARAMETERS IN OUT, IN, AND OUT
-There are three argument modes IN, OUT and IN OUT to be used with any subprograms.
-
+# Exercise for Procedure and Function
+Comparing Usage Parameters Type In Function
 ## USAGE of INOUT
 ```
 --USING INOUT
