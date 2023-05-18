@@ -85,7 +85,34 @@ end;
 
 ## Iterative Control
 It allows executing a section of the program repeatedly as long as a specified condition remains true.
+The LOOP command initializes a group of commands indefinitely, or until a condition forces a “break” in the LOOP and detours the execution of the program to another place. The command is used with the EXIT command, which is responsible for interrupting the LOOP execution.
+
+### Simple LOOP Statement
+The simplest form of LOOP statement is the basic (or infinite) loop, which encloses a sequence of statements between the keywords LOOP and END LOOP,  If further processing is undesirable or impossible, you can use an EXIT statement to complete the loop using EXIT or EXIT WHEN.
+
+#### EXIT Statement
+The EXIT statement forces a loop to complete unconditionally. When an EXIT statement is encountered, the loop completes immediately and control passes to the next statement. Example :
+```
+LOOP
+...
+IF credit_rating < 3 THEN
+   ...
+   EXIT; -- exit loop immediately
+   END IF;
+END LOOP;
+-- control resumes here
+```
+
+#### EXIT-WHEN Statement
+The EXIT-WHEN statement allows a loop to complete conditionally. When the EXIT statement is encountered, the condition in the WHEN clause is evaluated.
+
 
 ## Sequential Control
 It allows ordering the sequence of processing sections of the program.
+```
+LOOP 
+      EXIT WHEN c>5;  -- exit loop if condition is true
+   ...
+END LOOP;
+```
 
