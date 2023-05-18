@@ -6,6 +6,8 @@ We can change the logical flow of statements within the PL/SQL block with a numb
 ## Conditional Control
 It allows testing the truth of a condition and executing sections of the program depending on the condition that may be true or false.
 
+### IF Statements
+
 ## Iterative Control
 It allows executing a section of the program repeatedly as long as a specified condition remains true.
 
