@@ -59,9 +59,10 @@ age number (4);
 ```
 
 ## With the use of SELECT INTO clause
-The second way to assign values to variables is to use the SELECT command to assign the contents of the fields of a table to a variable:
+The second way to assign values to variables is to use the SELECT command to assign the contents of the fields of a table to a variable.
+Supposed _emp_ table has columns empno, name, and salary then we want to fetch a single row using select statement into variable v_salary :
 ```
-SELECT sal INTO s FROM emp where empno = 100;
+SELECT sal INTO v_salary FROM emp where empno = 100;
 ```
 In this case, variables’ will get the value from sal column of emp table for empno 100.
 
@@ -78,4 +79,15 @@ Attributes allow us to refer to data types and objects from the database. PL/SQL
 ¨ %ROWTYPE
 
 ### %TYPE
-In general, the variables that deal with table columns should have the same data type and length as the column itself. %type attribute is used when declaring variables that refer to the database columns. When using the %type keyword, all you need to know is the name of the column and the table to which the variable will correspond.
+In general, the variables that deal with table columns should have the same data type and length as the column itself. %type attribute is used when declaring variables that refer to the database columns. When using the %type keyword, all you need to know is the name of the column and the table to which the variable will correspond. example we want to declare a variable _v_empno_ which is it has exactly same typedata of _empno_ in _emp_ table.
+
+```
+DECLARE
+ eno emp.empno%type; -- eno of same data type and width as empno of emp table
+salary emp.sal%type;
+ 
+BEGIN
+   ………..
+   ………..
+END;
+```
