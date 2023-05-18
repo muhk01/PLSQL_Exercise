@@ -80,6 +80,7 @@ Use "FOR EACH ROW":
 
 When you need to perform some action for each individual row affected by the triggering statement. For example, if you want to update a column in another table for each inserted/updated/deleted row.
 When you want to refer to the values of the affected row(s) using the "OLD" and "NEW" qualifiers. These qualifiers allow you to access the old and new values of the row being modified.
+
 Don't use "FOR EACH ROW":
 
 When you want the trigger to execute only once for the entire triggering statement, regardless of the number of rows affected. This is useful when you want to perform an action based on the overall result of the statement, rather than on individual rows.
