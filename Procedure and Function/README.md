@@ -65,3 +65,49 @@ BEGIN
     DBMS_OUTPUT.PUT_LINE('DIVISION IS'||F);
 END;
 ```
+## Local Function
+A function is a subprogram that computes a value. Functions and procedures are structured alike, except that functions have a **_RETURN_** clause.
+Example of Local Function
+```
+DECLARE
+	A NUMBER;
+	B NUMBER;
+	C NUMBER;
+	FUNCTION ADDN ( A IN NUMBER, B IN NUMBER) RETURN NUMBER IS
+	BEGIN
+		C:=A+B;
+		RETURN(C);
+	END;
+BEGIN
+	A:=10;
+	B:=5;
+	C:=ADDN(A,B);
+	DBMS_OUTPUT.PUT_LINE('ADDITION IS'||C);
+END; 
+```
+
+## Stored Function
+Example of Stored Function, create a stored Function
+```
+CREATE OR REPLACE FUNCTION ADDN( A IN NUMBER, B IN NUMBER) 
+    RETURN NUMBER IS
+    C NUMBER;
+BEGIN
+    C:=A+B;
+    RETURN(C);
+END;
+```
+
+After stored Function created we may Call from PL/SQL Block.
+```
+DECLARE
+   A NUMBER;
+   B NUMBER;
+   C NUMBER;
+BEGIN
+   A:=10;
+   B:=5;
+   C:=ADDN(A,B);
+   DBMS_OUTPUT.PUT_LINE('ADDITION IS'||C);
+END; 
+```
