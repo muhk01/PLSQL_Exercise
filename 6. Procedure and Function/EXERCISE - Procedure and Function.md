@@ -1,5 +1,5 @@
 # Exercise for Procedure and Function
-Comparing Usage Parameters Type In Function
+Comparing and Understanding the Usage Parameters Type In Function
 ## USAGE of INOUT
 ```
 --USING INOUT
@@ -17,7 +17,7 @@ BEGIN
 END;
 ```
 return 
-Before: Hello
+Before: Hello \n
 After: Hello, world!
 
 ## USAGE OF IN
@@ -57,8 +57,8 @@ BEGIN
 END;
 ```
 return
-Before: Hello
-After: , world!
+Before: Hello \n
+After: , world! \n
 because Hello never passed into function as it is declared as output.
 
 # Assignment for PROCEDURE
