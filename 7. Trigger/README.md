@@ -1,13 +1,17 @@
 # Use of Database Triggers
 Database triggers can be used for the following purposes:
-To derive column values automatically.
+1. To derive column values automatically.
 
-To enforce complex integrity constraints.
+2. To enforce complex integrity constraints.
 
-To enforce complex business rules.
+3. To enforce complex business rules.
 
-To customize complex security authorizations.
+4. To customize complex security authorizations.
 
-To maintain replicate tables.
+5. To maintain replicate tables.
 
-To audit data modifications.
+6. To audit data modifications.
+
+# TRIGGER vs PROCEDURE
+![alt text](https://raw.githubusercontent.com/muhk01/plsql_exercise/main/7.%20Trigger/2020-05-17_08-28-46-8f98f0f1bfc4e3eb68ebdcf651bc9a5d.png)
+
