@@ -41,7 +41,8 @@ end;
 
 # Usage of GOTO Statement
 
-## Usage GOTO to skip to End Statement when no number Doesn't Satisfy the Assigned Value.
+## Usage GOTO 
+Using GOTO To skip to End Statement when no number Doesn't Satisfy the Assigned Value.
 ```
 declare
 a number:=1;
