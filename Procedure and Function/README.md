@@ -3,6 +3,8 @@
 PL/SQL has two types of subprograms:
 Procedures and Functions
 
+## Difference between Procedure and Function
+![alt text](https://raw.githubusercontent.com/muhk01/plsql_exercise/main/Procedure%20and%20Function/2020-05-17_06-53-11-4b347fe12579a8bf9131f1874704f616.png)
 ## Local Subprograms
 Such procedures and functions are local to the PL/SQL module, which contains it. They can be created in the declarative section of the PL/SQL module, local to the module. The local module can be called anywhere in the module’s execution section. Example Consider a procedure that accepts two numbers and return addition, subtraction, multiplication, and division of two numbers or in other words a procedure to return multiple values through arguments :
 ```
