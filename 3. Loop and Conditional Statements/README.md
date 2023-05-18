@@ -105,10 +105,6 @@ END LOOP;
 
 #### EXIT-WHEN Statement
 The EXIT-WHEN statement allows a loop to complete conditionally. When the EXIT statement is encountered, the condition in the WHEN clause is evaluated.
-
-
-## Sequential Control
-It allows ordering the sequence of processing sections of the program.
 ```
 LOOP 
       EXIT WHEN c>5;  -- exit loop if condition is true
@@ -116,3 +112,52 @@ LOOP
 END LOOP;
 ```
 
+### WHILE-LOOP Statement
+The WHILE-LOOP statement associates a condition with a sequence of statements enclosed by the keywords LOOP and END LOOP. Before each iteration of the loop, the condition is evaluated. If the condition yields TRUE, the sequence of statements is executed, then control resumes at the top of the loop.
+```
+WHILE i <= 10 LOOP
+  a:=n*i;
+   i:=i+1;
+END LOOP;
+```
+
+### FOR LOOP Statement
+
+Whereas the number of iterations through a WHILE loop is unknown until the loop completes, the number of iterations through a FOR loop is known before the loop is entered. FOR loops iterate over a specified range of integers.
+The range is evaluated when the FOR loop is first entered and is never re-evaluated. As the next example shows, the sequence of statements is executed once for each integer in the range. After each iteration, the loop counter is incremented.
+```
+FOR i IN 1..3 LOOP  -- assign the values 1,2,3 to I
+   sequence_of_statements;  -- executes three times
+END LOOP;
+```
+
+## Sequential Control
+It allows ordering the sequence of processing sections of the program.
+
+### GOTO Statement
+The GOTO statement branches to a label unconditionally. The label must be unique within its scope and must precede an executable statement or a PL/SQL block.
+for every <<GOTO>> should followed with some statement, here example of illegal GOTO Statement
+```
+LOOP
+…….
+IF A>B then
+    Go to <<abc>>;
+END IF;
+……
+    <<abc> -- it is illegal because it does not precede the executable statement.
+  END LOOP:
+End;
+```
+The solution of illegal use of GOTO statement is with the NULL statement as shown below:
+```
+LOOP
+….,…
+ IF A>B THEN
+    GO TO <<ABC>>;
+  END IF;
+  …….
+  <<abc>> /* It is correct now because it is followed by an executable 
+           statement  NULL without changing the meaning of the block.*/
+  NULL;
+END LOOP;   
+```
