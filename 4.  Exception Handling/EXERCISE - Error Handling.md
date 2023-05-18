@@ -10,6 +10,7 @@ Insert to the table
 ```
 insert into emp_exc(empno, name, job, sal) values (1,'Raj','prof',96000);
 insert into emp_exc(empno, name, job, sal) values (2,'Amar','assoc prof',80000);
+```
 
 And we want to SELECT which empno is never exists in table, oracle will raise error  "ORA-01403: no data found.", therefore, we could handle with
 ```
